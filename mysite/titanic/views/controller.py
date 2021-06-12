@@ -19,7 +19,7 @@ class Controller(object):
 
     def learning(self, train, test):
         this = self.modeling(train, test)
-        print(f'사이킷런의 SVC 알고리즘 정확도 {self.service.get_accurcy(this)} %')
+        print(f'사이킷런 알고리즘 정확도 {self.service.get_accurcy(this)} %')
 
     def submit(self, train, test):
         this = self.modeling(train, test)
@@ -56,4 +56,5 @@ class Controller(object):
         print(f'7. Test 의 상위 1개 행\n {this.test.head()}개')
         print(f'8. Test 의 null 의 갯수\n {this.test.isnull().sum()}개')
         print('*' * 100)
+
 
